@@ -84,11 +84,44 @@
             position: relative;
             overflow: hidden;
             margin: 50px;
-            width: 600px;
-            height: 600px;
-            border: 12px solid #b2a98d;
+            width: 50vw;  /* 根据视口宽度设置宽度 */
+            height: 50vw; /* 根据视口宽度设置高度 */
+            border: 7px solid #b2a98d;
             border-radius: 50%;
             box-shadow: 0 0 20px #b2a98d;
+        }
+        
+        .turntable-wrap .turntable {
+            position: absolute;
+            margin: 10%;
+            width: 80%;  /* 转盘大小占父容器的80% */
+            height: 80%; /* 转盘高度占父容器的80% */
+            border-radius: 50%;
+            background: #fff;
+        }
+        
+        /* 媒体查询：对于小屏设备，设置较小的转盘 */
+        @media (max-width: 600px) {
+            .turntable-wrap {
+                width: 70vw;
+                height: 70vw;
+            }
+            .turntable-wrap .turntable {
+                width: 80%;
+                height: 80%;
+            }
+        }
+        
+        /* 媒体查询：对于较大的屏幕，增大转盘尺寸 */
+        @media (min-width: 1200px) {
+            .turntable-wrap {
+                width: 40vw;
+                height: 40vw;
+            }
+            .turntable-wrap .turntable {
+                width: 90%;
+                height: 90%;
+            }
         }
 
         .turntable-wrap .light {
@@ -135,14 +168,14 @@
             animation: white-to-yellow 1s linear reverse infinite;
         }
 
-        .turntable-wrap .turntable {
+/*         .turntable-wrap .turntable {
             position: absolute;
             margin: 20px;
             width: 300px;
             height: 300px;
             border-radius: 50%;
             background: #fff;
-        }
+        } */
 
         .turntable-wrap .turntable .bg {
             position: absolute;
