@@ -16,6 +16,7 @@
             /* 设置为苹方字体 */
             height: 100%;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             margin: 0;
@@ -27,23 +28,11 @@
         }
 
         .turntable-title {
-            font-family: 'PingFang SC', 'Helvetica Neue', sans-serif;
-            /* 设置为苹方字体 */
             text-align: center;
-            /* 水平居中 */
             font-size: 28px;
-            /* 字体大小 */
-            /* font-weight: bold; */
-            /* 加粗 */
             color: #f1c971;
-            /* 金黄色 */
-            /* text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); */
-            /* 阴影增强立体感*/
-            margin: 30px auto 60px auto;
-            /* 上下间距 */
+            margin: 30px auto;
             animation: pulse 1.6s infinite ease-in-out;
-            /* 轻微动效 */
-            /* font-family: "Segoe UI", sans-serif; */
         }
 
         @keyframes white-to-yellow {
@@ -79,21 +68,19 @@
         }
 
         .turntable-wrap {
-            margin-top: 130px; /* 添加上方间距 */
             position: relative;
             overflow: hidden;
-            /* margin: 50px; */
-            width: 340px;
-            height: 340px;
+            width: 280px;
+            height: 280px;
             border: 7px solid #b2a98d;
             border-radius: 50%;
             box-shadow: 0 0 20px #b2a98d;
             transform-origin: center;
-            /* 保证放大从中心开始 */
-            transform: scale(1.5);
-            /* 可以调整缩放比例 */
+            transform: scale(1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
-
 
         .turntable-wrap .light {
             position: absolute;
@@ -142,14 +129,10 @@
         .turntable-wrap .turntable {
             position: absolute;
             margin: 20px;
-            width: 300px;
-            height: 300px;
+            width: 240px;
+            height: 240px;
             border-radius: 50%;
             background: #fff;
-            /* transform-origin: center;
-            
-            transform: scale(1.5); */
-            
         }
 
         .turntable-wrap .turntable .bg {
@@ -256,7 +239,7 @@
         }
 
         footer {
-            margin-top: 130px; /* 添加上方间距 */
+            margin-top: 20px;
             position: fixed;
             left: 0;
             right: 0;
@@ -265,6 +248,29 @@
             justify-content: center;
             font-size: 14px;
             color: #333;
+        }
+
+        /* 适配手机屏幕 */
+        @media screen and (max-width: 768px) {
+            .turntable-wrap {
+                width: 240px;
+                height: 240px;
+            }
+
+            .turntable-wrap .turntable {
+                width: 200px;
+                height: 200px;
+            }
+
+            .turntable-wrap .pointer {
+                width: 40px;
+                height: 40px;
+                margin: -20px auto;
+            }
+
+            .turntable-title {
+                font-size: 22px;
+            }
         }
     </style>
 </head>
