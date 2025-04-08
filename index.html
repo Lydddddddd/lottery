@@ -5,7 +5,6 @@
     <meta charset="utf-8" />
     <title>简单转盘</title>
     <style>
-
         * {
             margin: 0;
             padding: 0;
@@ -13,9 +12,8 @@
 
         html,
         body {
-            transform: scale(1.5); /* 将网页整体放大 1.5 倍 */
-            transform-origin: top left; /* 设置缩放的起始点为页面的左上角 */
-            font-family: 'PingFang SC', 'Helvetica Neue', sans-serif; /* 设置为苹方字体 */
+            font-family: 'PingFang SC', 'Helvetica Neue', sans-serif;
+            /* 设置为苹方字体 */
             height: 100%;
             display: flex;
             align-items: center;
@@ -29,7 +27,8 @@
         }
 
         .turntable-title {
-            font-family: 'PingFang SC', 'Helvetica Neue', sans-serif; /* 设置为苹方字体 */
+            font-family: 'PingFang SC', 'Helvetica Neue', sans-serif;
+            /* 设置为苹方字体 */
             text-align: center;
             /* 水平居中 */
             font-size: 28px;
@@ -40,7 +39,7 @@
             /* 金黄色 */
             /* text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); */
             /* 阴影增强立体感*/
-            margin: 30px auto 20px auto;
+            margin: 30px auto 60px auto;
             /* 上下间距 */
             animation: pulse 1.6s infinite ease-in-out;
             /* 轻微动效 */
@@ -80,49 +79,21 @@
         }
 
         .turntable-wrap {
-            margin: 0;
+            margin-top: 130px; /* 添加上方间距 */
             position: relative;
             overflow: hidden;
-            margin: 50px;
-            width: 50vw;  /* 根据视口宽度设置宽度 */
-            height: 50vw; /* 根据视口宽度设置高度 */
+            /* margin: 50px; */
+            width: 340px;
+            height: 340px;
             border: 7px solid #b2a98d;
             border-radius: 50%;
             box-shadow: 0 0 20px #b2a98d;
+            transform-origin: center;
+            /* 保证放大从中心开始 */
+            transform: scale(1.5);
+            /* 可以调整缩放比例 */
         }
-        
-        .turntable-wrap .turntable {
-            position: absolute;
-            margin: 10%;
-            width: 80%;  /* 转盘大小占父容器的80% */
-            height: 80%; /* 转盘高度占父容器的80% */
-            border-radius: 50%;
-            background: #fff;
-        }
-        
-        /* 媒体查询：对于小屏设备，设置较小的转盘 */
-        @media (max-width: 600px) {
-            .turntable-wrap {
-                width: 70vw;
-                height: 70vw;
-            }
-            .turntable-wrap .turntable {
-                width: 80%;
-                height: 80%;
-            }
-        }
-        
-        /* 媒体查询：对于较大的屏幕，增大转盘尺寸 */
-        @media (min-width: 1200px) {
-            .turntable-wrap {
-                width: 40vw;
-                height: 40vw;
-            }
-            .turntable-wrap .turntable {
-                width: 90%;
-                height: 90%;
-            }
-        }
+
 
         .turntable-wrap .light {
             position: absolute;
@@ -168,14 +139,18 @@
             animation: white-to-yellow 1s linear reverse infinite;
         }
 
-/*         .turntable-wrap .turntable {
+        .turntable-wrap .turntable {
             position: absolute;
             margin: 20px;
             width: 300px;
             height: 300px;
             border-radius: 50%;
             background: #fff;
-        } */
+            /* transform-origin: center;
+            
+            transform: scale(1.5); */
+            
+        }
 
         .turntable-wrap .turntable .bg {
             position: absolute;
@@ -281,6 +256,7 @@
         }
 
         footer {
+            margin-top: 130px; /* 添加上方间距 */
             position: fixed;
             left: 0;
             right: 0;
@@ -290,7 +266,6 @@
             font-size: 14px;
             color: #333;
         }
-
     </style>
 </head>
 
