@@ -5,6 +5,7 @@
     <meta charset="utf-8" />
     <title>简单转盘</title>
     <style>
+
         * {
             margin: 0;
             padding: 0;
@@ -12,6 +13,8 @@
 
         html,
         body {
+            transform: scale(1.5); /* 将网页整体放大 1.5 倍 */
+            transform-origin: top left; /* 设置缩放的起始点为页面的左上角 */
             font-family: 'PingFang SC', 'Helvetica Neue', sans-serif; /* 设置为苹方字体 */
             height: 100%;
             display: flex;
@@ -246,12 +249,15 @@
 
         footer {
             position: fixed;
-            left: 50%;
+            left: 0;
+            right: 0;
             bottom: 10px;
-            transform: translateX(-50%);
+            display: flex;
+            justify-content: center;
             font-size: 14px;
             color: #333;
         }
+
     </style>
 </head>
 
